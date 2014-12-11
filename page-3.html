@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	
+<div id="div_test">
+	<input id="btn_test" type="button" value="web前端开发-css119" />
+</div>
+<!-- bottom script-->
+<script type="text/javascript">// <![CDATA[
+window.onload=function(){
+	/* 事件执行在捕获阶段*/
+    document.getElementById("div_test").addEventListener("click",test1,true);
+    /* 事件执行在冒泡阶段*/
+    document.getElementById("btn_test").addEventListener("click",test2,false);
+}
+function test1(){
+	alert("外层div触发")
+}
+function test2(){
+	alert("内层input触发")
+}
+// ]]></script>
+</body>
+</html>
